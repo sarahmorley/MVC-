@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        <h3 class="text-center">Login</h3>
+        <form class="text-center">
+            <label> UserName</label><br />
+            <input id="Text1" type="text" /><br />
+            <label>Password</label><br />
+            <input id="Password1" type="password" /><br />
+            <br />
+            <input id="Submit1" type="submit" value="Login" />
+            <input id="Reset1" type="reset" value="Clear" />
+        </form>
+        @Html.ActionLink("Back to Home Page", "Index", "Home")
+    </div>
+</body>
+</html>
