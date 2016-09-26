@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
+
 namespace SnippetsHub.Controllers
 {
     public class HomeController : Controller
@@ -18,9 +20,18 @@ namespace SnippetsHub.Controllers
             return View();
         }
 
-        public ActionResult TermsConditions()
+        public ActionResult SiteMap()
         {
             return View();
         }
+
+        public ActionResult FrequentlyAskedQuestions()
+        {
+            return View();
+        }
+
+
+
+
     }
 }

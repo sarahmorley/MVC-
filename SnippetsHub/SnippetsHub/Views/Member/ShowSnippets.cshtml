@@ -1,0 +1,23 @@
+﻿@model IEnumerable<SnippetsHub.Models.Snippet>
+@{
+    ViewBag.Title = "ShowSnippets";
+}
+
+<h2>My Snippets</h2>
+
+<div>
+    @foreach (var snippet in Model)
+    {
+        <p>
+            Snippet Title: @snippet.Title<br />
+            Snippet Description: @snippet.SnippetDescription<br />
+            Snippet Content: <br/>
+            @*@Html.Raw(HttpUtility.HtmlDecode(snippet.Content)); another attempt at showing snippets in correct format*@
+        </p>
+<pre>@snippet.Content</pre>
+        <hr />
+    }
+
+    @Html.ActionLink("Back to My Profile", "Snippet", "Member", null, new { @style = "padding: 5px; color: black;" })
+</div>
+

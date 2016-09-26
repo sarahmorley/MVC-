@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "SiteMap";
+}
+
+<h2>SiteMap</h2>
+
+<ul>
+    <li> @Html.ActionLink("Home", "Index", "Home") </li> 
+    <li> @Html.ActionLink("About Us", "AboutUs", "Home")</li> 
+    <li> @Html.ActionLink("FAQ", "FrequentlyAskedQuestions", "Home")</li>
+    <li> @Html.ActionLink("Interested in Advertising?", "Index", "Advertising")</li>
+    <li> @Html.ActionLink("Register", "RegistrationPage", "Member")</li>
+    <li> @Html.ActionLink("Login", "Login", "Member")</li>
+    <li> @Html.ActionLink("MyProfile", "Snippet", "Member")</li>
+</ul>

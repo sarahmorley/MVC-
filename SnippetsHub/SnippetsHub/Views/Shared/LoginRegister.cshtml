@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "LoginRegister";
+}  
+@if (Session["memberName"] != null)
+{
+    <span> Hello @Session["memberName"]</span> <br/>
+    <span> @Html.ActionLink("Log Off", "LogOff", "Member", null) </span> 
+        
+
+}
+
+
+else
+{
+
+    @Html.ActionLink("Login / ", "Login", "Member", null,
+        new { @class="text-right" })
+
+    @Html.ActionLink("Register", "RegistrationPage", "Member")
+
+        
+}
+
+

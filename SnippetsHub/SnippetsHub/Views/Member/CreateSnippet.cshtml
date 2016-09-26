@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "CreateSnippet";
+}
+
+<h2>Snippets</h2>
+
+@ViewData["message"]<br /><br />
+@Html.ActionLink("Create another Snipept", "Snippet", "Member", null, new { @style = "padding: 5px; color: black;" })<br />
+@Html.ActionLink("Back to Your Profile" , "Snippet", "Member", null, new { @style = "padding: 5px; color: black;" })

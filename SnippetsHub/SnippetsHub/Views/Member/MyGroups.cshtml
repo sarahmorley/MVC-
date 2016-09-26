@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SnippetsHub.Models.Group>
+
+
+
+@{
+    ViewBag.Title = "MyGroups";
+}
+
+<h2 class="text-center">MyGroups</h2>
+
+<div class="container">
+    <div class="row">
+       
+            <h4>My Groups</h4>
+
+            <div class="col-sm-8">
+                @if (Model != null)
+                {
+                    foreach (var group in Model)
+                    {
+                        <p>
+                            Group Name: @group.GroupName<br />
+                            Group Description: @group.GroupDescription
+                            @using (Html.BeginForm("GetGroupPage", "Member", FormMethod.Post))
+                            {
+                                @*<input type="hidden" name="groupName" value=@group.GroupName>*@
+                                @Html.Hidden("groupName", @group.GroupName)
+                                <input class="btn btn-primary" type="submit" value="View Group" />
+                            }
+                        </p>
+                        <hr />
+                    }
+                }
+
+                @Html.ActionLink("Back to My Profile", "Snippet", "Member", null, new { @style = "padding: 5px; color: black;" })
+            </div>
+
+          
+
+        <div class="col-sm-4">
+
+            <h4>Enter the name of a group you wish to join</h4>
+      
+                @using (Html.BeginForm())
+            {
+                 <p>  <input type="text" id="testinput" name="groupName" /></p> 
+
+                   <p> <input class="btn btn-primary" type="submit" value="Join Group" /></p> <br/>
+                }
+                <br />
+            </div>
+
+</div>
+        </div> 

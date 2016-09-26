@@ -1,0 +1,40 @@
+﻿@model SnippetsHub.Models.AdvertisingModel
+@{
+    ViewBag.Title = "Index";
+}
+
+    <div class="text-center">
+        <h2>Hello Prospective Investors</h2>
+        <p>We are currently looking for ways to generate revenue for SnippetHub so that we can invest further in it and hopefully improve functionality</p>
+        <p>We, therefore, are offering space on our app to companies wishing to advertise.</p>
+        <p>If you are interested in securing some space for your company to advertise please fill out the form below and we will be in contact with you.</p>
+        <p>Regards, </p>
+        <p>Ruth, Sarah and Craig</p>
+    </div>
+<div style="margin-left:50px">
+    @using (Html.BeginForm("Advertising", "Advertising", FormMethod.Post))
+    {
+
+        @Html.ValidationSummary()
+
+        @Html.LabelFor(a => a.CompanyName)<br />
+        @Html.TextBoxFor(a => a.CompanyName)<br /><br />
+
+        @Html.LabelFor(a => a.CompanyContactPerson)<br />
+        @Html.TextBoxFor(a => a.CompanyContactPerson)<br /><br />
+
+        @Html.LabelFor(a => a.ContactPersonEmail)<br />
+        @Html.TextBoxFor(a => a.ContactPersonEmail)<br /><br /><br />
+
+        @Html.LabelFor(a => a.AdvertisingIdea)<br />
+        @Html.TextAreaFor(a => a.AdvertisingIdea, new { @rows = 10, @cols = 80 })<br /><br />
+
+
+        <input class="btn btn-primary" id="Submit1" type="submit" value="Send" />
+        <input class="btn btn-warning" id="Reset1" type="reset" value="Clear" />
+    }
+</div>
+
+
+
+

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Message";
+}
+
+<h2>@ViewData["message"]</h2>
+
+<h3> Thank you for choosing to register with Snippetshub</h3>
+
+<p> Click on the link below to Login to your profile </p> <br/>
+
+@Html.ActionLink("Login", "Login", "Member")

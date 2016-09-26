@@ -1,0 +1,27 @@
+﻿@model SnippetsHub.Models.Group
+@{
+    ViewBag.Title = "CreateGroup";
+}
+
+<div style="margin-left:50px">
+
+    <h2>Create Group</h2>
+    @using (Html.BeginForm("NewGroup", "Member", FormMethod.Post, new { id = "groupForm" }))
+    {
+        @Html.ValidationSummary()
+
+        @Html.ValidationMessageFor(g => g.GroupName)<br />
+            @Html.LabelFor(g => g.GroupName)<br />
+            @Html.TextBoxFor(g => g.GroupName)<br /><br />
+
+            @Html.ValidationMessageFor(g => g.GroupDescription)<br />
+            @Html.LabelFor(g => g.GroupDescription)<br />
+            @Html.TextBoxFor(g => g.GroupDescription)<br /><br />
+
+            <input class="btn btn-primary" id="Submit1" type="submit" value="Add" />
+            <input class="btn btn-warning" id="Reset1" type="button" value="Clear" onclick="submitForm()" />
+    }
+
+    @Html.ActionLink("Back to My Profile", "Snippet", "Member", null, new { @style = "padding: 5px; color: black;" })
+
+</div> 

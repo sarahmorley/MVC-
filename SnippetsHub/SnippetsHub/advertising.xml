@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<AdvertisingPitches>
+  <AvertisingPitch>
+    <CompanyName>Tesco Ireland</CompanyName>
+    <CompanyContactPerson>John Brown</CompanyContactPerson>
+    <ContactPersonEmail>jb@tesco.com</ContactPersonEmail>
+    <AdvertisingIdea>We would like to place an add displaying our latest offers on the homepage.</AdvertisingIdea>
+  </AvertisingPitch>
+  <AvertisingPitch>
+    <CompanyName>Dunnes Stores</CompanyName>
+    <CompanyContactPerson>Jack Lawless</CompanyContactPerson>
+    <ContactPersonEmail>Jack@dunnes.com</ContactPersonEmail>
+    <AdvertisingIdea>We would like to display our logo on every page of the site. </AdvertisingIdea>
+  </AvertisingPitch>
+</AdvertisingPitches>

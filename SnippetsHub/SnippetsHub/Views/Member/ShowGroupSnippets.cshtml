@@ -1,0 +1,23 @@
+﻿@model IEnumerable<SnippetsHub.Models.Snippet>
+@{
+    ViewBag.Title = "ShowGroupSnippets";
+}
+
+<h2>ShowGroupSnippets</h2>
+
+<div>
+    @foreach (var snippet in Model)
+    {
+        <p>
+            Snippet Title: @snippet.Title<br />
+            Snippet Description: @snippet.SnippetDescription<br />
+            Snippet Content: <br />
+            Member Email: @snippet.Email<br/>
+            @*@Html.Raw(HttpUtility.HtmlDecode(snippet.Content));*@
+        </p>
+<pre>@snippet.Content</pre>
+        <hr />
+    }
+
+    @Html.ActionLink("Back to My Profile", "Snippet", "Member", null, new { @style = "padding: 5px; color: black;" })
+</div>

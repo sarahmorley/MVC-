@@ -1,0 +1,65 @@
+﻿@model SnippetsHub.Models.Snippet
+
+@{
+    ViewBag.Title = "Snippet";
+}
+
+@section Logged{
+    @if (Session["memberName"] == null)
+    {
+        Response.Redirect(Url.Action("Login", "Member"));
+    }
+}
+
+
+<script>
+    function submitForm() {
+        document.getElementById("addSnippetForm").reset();
+    }
+</script>
+<h2 class="text-center">Welcome to Your Profile </h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+           
+
+                @using (Html.BeginForm("CreateSnippet", "Member", FormMethod.Post, new { id = "addSnippetForm" }))
+                {
+                    <h3> Add a Snippet Here</h3>
+                    @Html.ValidationSummary()
+
+                    @Html.ValidationMessageFor(s => s.Title)<br />
+                    @Html.LabelFor(s => s.Title)<br />
+                    @Html.TextBoxFor(s => s.Title)<br /><br />
+
+                    @Html.ValidationMessageFor(s => s.SnippetDescription)<br />
+                    @Html.LabelFor(s => s.SnippetDescription)<br />
+                    @Html.TextBoxFor(s => s.SnippetDescription)<br /><br />
+
+                    @Html.ValidationMessageFor(s => s.Content)<br />
+                    @Html.LabelFor(s => s.Content)<br />
+                    @Html.TextAreaFor(s => s.Content, new { @cols = "80", @rows = "10" })<br /><br />
+
+                    <input class="btn btn-primary" id="Submit1" type="submit" value="Add Snippet" />
+                    <input class="btn btn-warning" id="Reset1" type="button" value="Clear" onclick="submitForm()"><br /><br />
+
+                }
+            </div>
+           <div class="col-sm-4" >
+               <h3> Choose a link below </h3>
+               <div style="border: groove; border-color: lightgrey;">
+           <h4> @Html.ActionLink("Show all Snippets", "ShowSnippets", "Member", null, new { @style = "padding: 5px; color: black;" })</h4> <br />
+
+           <h4> @Html.ActionLink("Add a new Group", "CreateGroup", "Member", null, new { @style = "padding: 5px; color: black;" })</h4> <br />
+
+           <h4> @Html.ActionLink("My Groups", "MyGroups", "Member", null, new { @style = "padding: 5px; color: black;" })</h4> <br />
+            </div>
+               </div> 
+        </div> 
+
+        </div>
+
+
+
+
+

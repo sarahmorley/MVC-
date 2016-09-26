@@ -1,38 +1,25 @@
-﻿
-@{
-    Layout = null;
-}
+﻿@{
+    ViewBag.Title = "Index";
+}   
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="~/Style.css" rel="stylesheet" />
-</head>
-<body>
-    <div>
-        <div class="jumbotron text-center">
-            <h1>Snippet Hub</h1>
-            <p>Built by Coders for Coders</p>
-            <p>Snippet Hub is a web application for storing and sharing handy snippets of code.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Welcome</h3>
+            <img src="~/Images/home1.png" width="250"/>
+            <p> Welcome to Snippet Hub, a completely free code sharing application built by coders for coders. Sign up today to save all your imporatnt code snipepts in one free place.</p>
         </div>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">   
-                </div>
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About Us", "AboutUs", "Home")</li>
-                    <li> @Html.ActionLink("Terms and Conditions", "TermsConditions", "Home")</li>
-                    <li> @Html.ActionLink("Register", "RegistrationPage", "Member")</li>
-                    <li> @Html.ActionLink("Login", "Login", "Member")</li>
-                </ul>
-            </div>
-        </nav>
-        <p> Information ......</p>
-        <p> Ruth's idea about the sketch </p>
+        <div class="col-sm-4">
+            <h3>Groups</h3>
+            <img src="~/Images/home2.png" width="250"/>
+            <p>Snippet Hub allows you to create groups among fellow developers where members can share code snippets. Members can join as many groups as they wish. 
+             </p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Personal</h3>
+            <img src="~/Images/home3.jpg" width="250" />
+            <p>With Snippet Hub you can keep all of your frequently used code snippets in one place that's accessible from any computer.</p>
+        </div>
     </div>
-</body>
-</html>
+</div>
